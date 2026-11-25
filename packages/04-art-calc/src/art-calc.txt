@@ -1,0 +1,14 @@
+NAME
+  art-calc - integer expression calculator
+
+SYNOPSIS
+  art-calc < FILE
+
+DESCRIPTION
+  art-calc reads integer expressions, one per line, from standard
+  input and prints the value of each. Operators + - * / % and unary
+  minus are supported, parentheses group subexpressions.
+  A syntax error is reported on standard error and the line is skipped.
+
+EXAMPLE
+  printf '2+3*4\n' | art-calc

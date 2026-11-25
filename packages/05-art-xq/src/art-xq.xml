@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manpage name="art-xq" section="1" date="2026-11-25">
+  <purpose>evaluate an XPath expression over an XML file</purpose>
+  <synopsis>art-xq FILE XPATH</synopsis>
+  <description>
+    <para>art-xq parses FILE with libxml2 and evaluates XPATH.</para>
+    <para>A node set is printed one node content per line, any other
+      result is converted to a string.</para>
+  </description>
+  <example>art-xq art-xq.xml 'count(//para)'</example>
+</manpage>
