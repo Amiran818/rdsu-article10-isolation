@@ -1,0 +1,60 @@
+<86>Nov 25 20:52:03 userdel[75696]: delete user 'rooter'
+<86>Nov 25 20:52:03 userdel[75696]: removed shadow group 'rooter' owned by 'rooter'
+<86>Nov 25 20:52:03 groupadd[75703]: group added to /etc/group: name=rooter, GID=1001
+<86>Nov 25 20:52:03 groupadd[75703]: group added to /etc/gshadow: name=rooter
+<86>Nov 25 20:52:03 groupadd[75703]: new group: name=rooter, GID=1001
+<86>Nov 25 20:52:03 useradd[75709]: new user: name=rooter, UID=1001, GID=1001, home=/root, shell=/bin/bash, from=none
+<86>Nov 25 20:52:03 userdel[75719]: delete user 'builder'
+<86>Nov 25 20:52:03 userdel[75719]: removed group 'builder' owned by 'builder'
+<86>Nov 25 20:52:03 userdel[75719]: removed shadow group 'builder' owned by 'builder'
+<86>Nov 25 20:52:03 groupadd[75726]: group added to /etc/group: name=builder, GID=1002
+<86>Nov 25 20:52:03 groupadd[75726]: group added to /etc/gshadow: name=builder
+<86>Nov 25 20:52:03 groupadd[75726]: new group: name=builder, GID=1002
+<86>Nov 25 20:52:03 useradd[75732]: new user: name=builder, UID=1002, GID=1002, home=/usr/src, shell=/bin/bash, from=none
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+<13>Nov 25 20:52:07 rpmi: libsqlite3-3.53.3-alt1 p11+429263.100.1.1 1786538863 installed
+<13>Nov 25 20:52:07 rpmi: libsqlite3-devel-3.53.3-alt1 p11+429263.100.1.1 1786538863 installed
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /usr/src/in/nosrpm/art-notes-1.0-alt1.nosrc.rpm (w1.gzdio)
+Installing art-notes-1.0-alt1.src.rpm
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /usr/src/tmp/rpmb-tmp.7Bug2R
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ rm -rf art-notes-1.0
++ echo 'Source #0 (art-notes-1.0.tar):'
+Source #0 (art-notes-1.0.tar):
++ /bin/tar -xf /usr/src/RPM/SOURCES/art-notes-1.0.tar
++ cd art-notes-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /usr/src/tmp/rpmb-tmp.TuRFfY
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-notes-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/usr/src/RPM/BUILD/art-notes-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto  -o art-notes notes.c -lsqlite3 -lreadline
+notes.c:9:10: fatal error: readline/readline.h: No such file or directory
+    9 | #include <readline/readline.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:7: art-notes] Error 1
+make: Leaving directory '/usr/src/RPM/BUILD/art-notes-1.0'
+error: Bad exit status from /usr/src/tmp/rpmb-tmp.TuRFfY (%build)
+
+
+RPM build errors:
+    Bad exit status from /usr/src/tmp/rpmb-tmp.TuRFfY (%build)
+Command exited with non-zero status 1
+0.08user 0.03system 0:00.12elapsed 96%CPU (0avgtext+0avgdata 15796maxresident)k
+0inputs+96outputs (0major+8809minor)pagefaults 0swaps
+hsh-rebuild: rebuild of `art-notes-1.0-alt1.src.rpm' failed.

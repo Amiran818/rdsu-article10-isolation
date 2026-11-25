@@ -1,0 +1,101 @@
+<86>Nov 25 20:55:24 userdel[88830]: delete user 'rooter'
+<86>Nov 25 20:55:24 groupadd[88837]: group added to /etc/group: name=rooter, GID=1001
+<86>Nov 25 20:55:24 groupadd[88837]: group added to /etc/gshadow: name=rooter
+<86>Nov 25 20:55:24 groupadd[88837]: new group: name=rooter, GID=1001
+<86>Nov 25 20:55:24 useradd[88843]: new user: name=rooter, UID=1001, GID=1001, home=/root, shell=/bin/bash, from=none
+<86>Nov 25 20:55:24 userdel[88853]: delete user 'builder'
+<86>Nov 25 20:55:24 userdel[88853]: removed group 'builder' owned by 'builder'
+<86>Nov 25 20:55:24 userdel[88853]: removed shadow group 'builder' owned by 'builder'
+<86>Nov 25 20:55:24 groupadd[88860]: group added to /etc/group: name=builder, GID=1002
+<86>Nov 25 20:55:24 groupadd[88860]: group added to /etc/gshadow: name=builder
+<86>Nov 25 20:55:24 groupadd[88860]: new group: name=builder, GID=1002
+<86>Nov 25 20:55:24 useradd[88866]: new user: name=builder, UID=1002, GID=1002, home=/usr/src, shell=/bin/bash, from=none
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+warning: Macro %meson not found
+warning: Macro %meson_build not found
+warning: Macro %meson_test not found
+warning: Macro %meson_install not found
+<13>Nov 25 20:55:28 rpmi: rpm-macros-meson-1.9.1-alt1 p11+397499.100.3.1 1763729262 installed
+<13>Nov 25 20:55:28 rpmi: ninja-build-1:1.12.2-alt2.1 p11+384447.100.1.1 1747463018 installed
+<13>Nov 25 20:55:28 rpmi: libmpdec3-2.5.1-alt3 p11+349211.100.1.1 1716635063 installed
+<13>Nov 25 20:55:28 rpmi: libgdbm-1.8.3-alt10 sisyphus+346222.200.3.2 1716468404 installed
+<13>Nov 25 20:55:28 rpmi: libexpat-2.7.1-alt1 p11+379972.100.3.1 1744981636 installed
+<13>Nov 25 20:55:28 rpmi: openssl-config-3.2.0-alt1 p11+370688.200.3.1 1738846989 installed
+<13>Nov 25 20:55:28 rpmi: libb2-0.98.1-alt1_1 p11+348811.100.1.1 1716520221 installed
+<13>Nov 25 20:55:28 rpmi: libp11-kit-1:0.26.5-alt1 p11+429276.100.1.1 1786546787 installed
+<13>Nov 25 20:55:28 rpmi: libtasn1-4.21.0-alt2 p11+420752.100.2.1 1782199433 installed
+<13>Nov 25 20:55:28 rpmi: rpm-macros-alternatives-0.5.3-alt1 p11+371884.100.2.1 1738152096 installed
+<13>Nov 25 20:55:28 rpmi: alternatives-0.5.3-alt1 p11+371884.100.2.1 1738152096 installed
+<13>Nov 25 20:55:28 rpmi: ca-certificates-2026.10.22-alt1 p11+438156.200.2.1 1793121994 installed
+<13>Nov 25 20:55:28 rpmi: ca-trust-0.2.0-alt1 sisyphus+344843.100.1.1 1712743326 installed
+<13>Nov 25 20:55:29 rpmi: p11-kit-trust-1:0.26.5-alt1 p11+429276.100.1.1 1786546787 installed
+<13>Nov 25 20:55:29 rpmi: libcrypto3-3.5.7-alt2 p11+437575.100.2.1 1792695564 installed
+<13>Nov 25 20:55:29 rpmi: libssl3-3.5.7-alt2 p11+437575.100.2.1 1792695564 installed
+<13>Nov 25 20:55:29 rpmi: python3-3.12.13-alt1 p11+427596.100.2.1 1786178037 installed
+<13>Nov 25 20:55:30 rpmi: python3-base-3.12.13-alt1 p11+427596.100.2.1 1786178037 installed
+<13>Nov 25 20:55:30 rpmi: python3-module-typing_extensions-4.15.0-alt2 p11+397165.74.80.1 1763985588 installed
+<13>Nov 25 20:55:30 rpmi: meson-1.9.1-alt1 p11+397499.100.3.1 1763729262 installed
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /usr/src/in/nosrpm/art-ini-1.0-alt1.nosrc.rpm (w1.gzdio)
+Installing art-ini-1.0-alt1.src.rpm
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /usr/src/tmp/rpmb-tmp.dGu3jE
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ rm -rf art-ini-1.0
++ echo 'Source #0 (art-ini-1.0.tar):'
+Source #0 (art-ini-1.0.tar):
++ /bin/tar -xf /usr/src/RPM/SOURCES/art-ini-1.0.tar
++ cd art-ini-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /usr/src/tmp/rpmb-tmp.t3bals
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-ini-1.0
++ mkdir -p x86_64-alt-linux
++ CFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export CFLAGS
++ CXXFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export CXXFLAGS
++ FFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export FFLAGS
++ FCFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export FCFLAGS
++ /usr/bin/meson setup . x86_64-alt-linux -Doptimization=2 --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/lib --libdir=/usr/lib64 --localstatedir=/var --sharedstatedir=/var/lib --includedir=/usr/include --datadir=/usr/share --sysconfdir=/etc --mandir=/usr/share/man --infodir=/usr/share/info --localedir=/usr/share/locale --wrap-mode=nodownload
+The Meson build system
+Version: 1.9.1
+Source dir: /usr/src/RPM/BUILD/art-ini-1.0
+Build dir: /usr/src/RPM/BUILD/art-ini-1.0/x86_64-alt-linux
+Build type: native build
+Project name: art-ini
+Project version: 1.0
+C compiler for the host machine: cc (gcc 13.2.1 "x86_64-alt-linux-gcc (GCC) 13.2.1 20240128 (ALT Sisyphus 13.2.1-alt3)")
+C linker for the host machine: cc ld.bfd 2.41.0.20230826
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Found pkg-config: YES (/usr/bin/pkg-config) 0.29.2
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency glib-2.0 found: NO (tried pkgconfig)
+
+meson.build:3:7: ERROR: Dependency "glib-2.0" not found, tried pkgconfig
+
+A full log can be found at /usr/src/RPM/BUILD/art-ini-1.0/x86_64-alt-linux/meson-logs/meson-log.txt
+error: Bad exit status from /usr/src/tmp/rpmb-tmp.t3bals (%build)
+
+
+RPM build errors:
+    Bad exit status from /usr/src/tmp/rpmb-tmp.t3bals (%build)
+Command exited with non-zero status 1
+0.45user 0.15system 0:00.60elapsed 99%CPU (0avgtext+0avgdata 38340maxresident)k
+0inputs+416outputs (0major+36007minor)pagefaults 0swaps
+hsh-rebuild: rebuild of `art-ini-1.0-alt1.src.rpm' failed.

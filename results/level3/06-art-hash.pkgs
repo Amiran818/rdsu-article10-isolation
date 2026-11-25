@@ -1,0 +1,11 @@
+alternatives-0.5.3-alt1
+ca-certificates-2026.10.22-alt1
+ca-trust-0.2.0-alt1
+libcrypto3-3.5.7-alt2
+libp11-kit-1:0.26.5-alt1
+libssl-devel-3.5.7-alt2
+libssl3-3.5.7-alt2
+libtasn1-4.21.0-alt2
+openssl-config-3.2.0-alt1
+p11-kit-trust-1:0.26.5-alt1
+rpm-macros-alternatives-0.5.3-alt1

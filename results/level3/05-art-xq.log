@@ -1,0 +1,61 @@
+<86>Nov 25 20:53:00 userdel[80070]: delete user 'rooter'
+<86>Nov 25 20:53:00 userdel[80070]: removed shadow group 'rooter' owned by 'rooter'
+<86>Nov 25 20:53:00 groupadd[80077]: group added to /etc/group: name=rooter, GID=1001
+<86>Nov 25 20:53:00 groupadd[80077]: group added to /etc/gshadow: name=rooter
+<86>Nov 25 20:53:01 groupadd[80077]: new group: name=rooter, GID=1001
+<86>Nov 25 20:53:01 useradd[80083]: new user: name=rooter, UID=1001, GID=1001, home=/root, shell=/bin/bash, from=none
+<86>Nov 25 20:53:01 userdel[80093]: delete user 'builder'
+<86>Nov 25 20:53:01 groupadd[80100]: group added to /etc/group: name=builder, GID=1002
+<86>Nov 25 20:53:01 groupadd[80100]: group added to /etc/gshadow: name=builder
+<86>Nov 25 20:53:01 groupadd[80100]: new group: name=builder, GID=1002
+<86>Nov 25 20:53:01 useradd[80106]: new user: name=builder, UID=1002, GID=1002, home=/usr/src, shell=/bin/bash, from=none
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+<13>Nov 25 20:53:04 rpmi: libxslt-1.1.43-alt1 p11+398423.100.3.1 1762855386 installed
+<13>Nov 25 20:53:04 rpmi: xsltproc-1.1.43-alt1 p11+398423.100.3.1 1762855386 installed
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /usr/src/in/nosrpm/art-xq-1.0-alt1.nosrc.rpm (w1.gzdio)
+Installing art-xq-1.0-alt1.src.rpm
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /usr/src/tmp/rpmb-tmp.ss9oHp
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ rm -rf art-xq-1.0
++ echo 'Source #0 (art-xq-1.0.tar):'
+Source #0 (art-xq-1.0.tar):
++ /bin/tar -xf /usr/src/RPM/SOURCES/art-xq-1.0.tar
++ cd art-xq-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /usr/src/tmp/rpmb-tmp.YcFW6y
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-xq-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/usr/src/RPM/BUILD/art-xq-1.0'
+xsltproc --nonet -o art-xq.1 man.xsl art-xq.xml
+make: Leaving directory '/usr/src/RPM/BUILD/art-xq-1.0'
+make: Entering directory '/usr/src/RPM/BUILD/art-xq-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto -I/usr/include/libxml2  -o art-xq xq.c -lxml2
+xq.c:4:10: fatal error: libxml/parser.h: No such file or directory
+    4 | #include <libxml/parser.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:7: art-xq] Error 1
+make: Leaving directory '/usr/src/RPM/BUILD/art-xq-1.0'
+error: Bad exit status from /usr/src/tmp/rpmb-tmp.YcFW6y (%build)
+
+
+RPM build errors:
+    Bad exit status from /usr/src/tmp/rpmb-tmp.YcFW6y (%build)
+Command exited with non-zero status 1
+0.07user 0.04system 0:00.10elapsed 102%CPU (0avgtext+0avgdata 13064maxresident)k
+0inputs+128outputs (0major+8257minor)pagefaults 0swaps
+hsh-rebuild: rebuild of `art-xq-1.0-alt1.src.rpm' failed.
