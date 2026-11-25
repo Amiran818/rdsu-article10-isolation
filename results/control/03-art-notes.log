@@ -1,0 +1,105 @@
+<86>Nov 25 20:38:30 userdel[16436]: delete user 'rooter'
+<86>Nov 25 20:38:30 userdel[16436]: removed group 'rooter' owned by 'rooter'
+<86>Nov 25 20:38:30 userdel[16436]: removed shadow group 'rooter' owned by 'rooter'
+<86>Nov 25 20:38:30 groupadd[16443]: group added to /etc/group: name=rooter, GID=1001
+<86>Nov 25 20:38:30 groupadd[16443]: group added to /etc/gshadow: name=rooter
+<86>Nov 25 20:38:30 groupadd[16443]: new group: name=rooter, GID=1001
+<86>Nov 25 20:38:30 useradd[16449]: new user: name=rooter, UID=1001, GID=1001, home=/root, shell=/bin/bash, from=none
+<86>Nov 25 20:38:30 userdel[16459]: delete user 'builder'
+<86>Nov 25 20:38:30 userdel[16459]: removed shadow group 'builder' owned by 'builder'
+<86>Nov 25 20:38:30 groupadd[16466]: group added to /etc/group: name=builder, GID=1002
+<86>Nov 25 20:38:30 groupadd[16466]: group added to /etc/gshadow: name=builder
+<86>Nov 25 20:38:30 groupadd[16466]: new group: name=builder, GID=1002
+<86>Nov 25 20:38:30 useradd[16472]: new user: name=builder, UID=1002, GID=1002, home=/usr/src, shell=/bin/bash, from=none
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+<13>Nov 25 20:38:36 rpmi: libsqlite3-3.53.3-alt1 p11+429263.100.1.1 1786538863 installed
+<13>Nov 25 20:38:36 rpmi: libsqlite3-devel-3.53.3-alt1 p11+429263.100.1.1 1786538863 installed
+<13>Nov 25 20:38:36 rpmi: libreadline-devel-8.2.10-alt1 sisyphus+338911.100.4.1 1706717067 installed
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /usr/src/in/nosrpm/art-notes-1.0-alt1.nosrc.rpm (w1.gzdio)
+Installing art-notes-1.0-alt1.src.rpm
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /usr/src/tmp/rpmb-tmp.OPfXEi
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ rm -rf art-notes-1.0
++ echo 'Source #0 (art-notes-1.0.tar):'
+Source #0 (art-notes-1.0.tar):
++ /bin/tar -xf /usr/src/RPM/SOURCES/art-notes-1.0.tar
++ cd art-notes-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /usr/src/tmp/rpmb-tmp.xdZDIa
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-notes-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/usr/src/RPM/BUILD/art-notes-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto  -o art-notes notes.c -lsqlite3 -lreadline
+make: Leaving directory '/usr/src/RPM/BUILD/art-notes-1.0'
++ exit 0
+Executing(%install): /bin/sh -e /usr/src/tmp/rpmb-tmp.sqbs00
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ /bin/chmod -Rf u+rwX -- /usr/src/tmp/art-notes-buildroot
++ :
++ /bin/rm -rf -- /usr/src/tmp/art-notes-buildroot
++ PATH=/usr/libexec/rpm-build:/usr/src/bin:/usr/bin:/bin:/usr/local/bin:/usr/games
++ cd art-notes-1.0
++ make 'INSTALL=/usr/libexec/rpm-build/install -p' install DESTDIR=/usr/src/tmp/art-notes-buildroot PREFIX=/usr
+make: Entering directory '/usr/src/RPM/BUILD/art-notes-1.0'
+install -Dm755 art-notes /usr/src/tmp/art-notes-buildroot/usr/bin/art-notes
+make: Leaving directory '/usr/src/RPM/BUILD/art-notes-1.0'
++ /usr/lib/rpm/brp-alt
+Cleaning files in /usr/src/tmp/art-notes-buildroot (auto)
+Verifying and fixing files in /usr/src/tmp/art-notes-buildroot (binconfig,pkgconfig,libtool,desktop,gnuconfig)
+Checking contents of files in /usr/src/tmp/art-notes-buildroot/ (default)
+Compressing files in /usr/src/tmp/art-notes-buildroot (auto)
+Verifying ELF objects in /usr/src/tmp/art-notes-buildroot (arch=normal,fhs=normal,lfs=relaxed,lint=relaxed,rpath=normal,stack=normal,textrel=normal,unresolved=normal)
+Splitting links to aliased files under /{,s}bin in /usr/src/tmp/art-notes-buildroot
+Executing(%check): /bin/sh -e /usr/src/tmp/rpmb-tmp.UPstVr
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-notes-1.0
++ make check
+make: Entering directory '/usr/src/RPM/BUILD/art-notes-1.0'
+./art-notes test.db add first
+printf 'second\n' | ./art-notes test.db shell > /dev/null
+test "$(./art-notes test.db list | cut -f2 | paste -sd,)" = "first,second"
+make: Leaving directory '/usr/src/RPM/BUILD/art-notes-1.0'
++ exit 0
+Processing files: art-notes-1.0-alt1
+Finding Provides (using /usr/lib/rpm/find-provides)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.CYrgEz
+find-provides: running scripts (debuginfo,lib,pam,perl,pkgconfig,python,python3,shell,sysusers)
+Finding Requires (using /usr/lib/rpm/find-requires)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.PcLmgx
+find-requires: running scripts (cpp,debuginfo,files,lib,pam,perl,pkgconfig,pkgconfiglib,python,python3,rpmlib,shebang,shell,static,symlinks,systemd-services)
+Requires: /lib64/ld-linux-x86-64.so.2, libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.4)(64bit), libreadline.so.8()(64bit) >= set:nlIfCiwp4, libsqlite3.so.0()(64bit) >= set:okf8TjYiZ6YadqZeTTz9blhq34IUj57uTu0, rtld(GNU_HASH)
+Requires(rpmlib): rpmlib(SetVersions)
+Finding debuginfo files (using /usr/lib/rpm/find-debuginfo-files)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.pGtox9
+Creating art-notes-debuginfo package
+Processing files: art-notes-debuginfo-1.0-alt1
+Finding Provides (using /usr/lib/rpm/find-provides)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.mCDe8q
+find-provides: running scripts (debuginfo)
+Finding Requires (using /usr/lib/rpm/find-requires)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.TvWs4w
+find-requires: running scripts (debuginfo)
+Requires: art-notes = 1.0-alt1, /usr/lib/debug/lib64/ld-linux-x86-64.so.2.debug, debug64(libc.so.6), debug64(libreadline.so.8), debug64(libsqlite3.so.0)
+Wrote: /usr/src/RPM/SRPMS/art-notes-1.0-alt1.src.rpm (w2.lzdio)
+Wrote: /usr/src/RPM/RPMS/x86_64/art-notes-1.0-alt1.x86_64.rpm (w2.lzdio)
+Wrote: /usr/src/RPM/RPMS/x86_64/art-notes-debuginfo-1.0-alt1.x86_64.rpm (w2.lzdio)
+1.76user 1.28system 0:06.52elapsed 46%CPU (0avgtext+0avgdata 24928maxresident)k
+16inputs+1256outputs (0major+166634minor)pagefaults 0swaps
