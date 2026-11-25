@@ -49,7 +49,7 @@ for dir in "$top"/packages/[0-9][0-9]-*; do
             brs=$(sed -n 's/^BuildRequires:[[:space:]]*//p' "$dir/$name.spec")
             {
                 hsh --initroot-only "$work" &&
-                echo "+ hsh-install $brs" &&
+                echo "+ hsh-install" $brs &&
                 hsh-install "$work" $brs &&
                 hsh-rebuild "$work" "$srpm"
             } > "$log" 2>&1 < /dev/null
