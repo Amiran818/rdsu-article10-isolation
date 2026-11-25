@@ -1,0 +1,11 @@
+package	rc	env_packages
+01-art-crc	0	5
+02-art-tui	0	5
+03-art-notes	0	3
+04-art-calc	0	3
+05-art-xq	0	3
+06-art-hash	0	13
+07-art-geo	0	45
+08-art-ini	0	28
+09-art-pyext	0	34
+10-art-uuid	0	2

@@ -1,0 +1,120 @@
+<86>Nov 25 20:59:14 userdel[110041]: delete user 'rooter'
+<86>Nov 25 20:59:14 userdel[110041]: removed group 'rooter' owned by 'rooter'
+<86>Nov 25 20:59:14 userdel[110041]: removed shadow group 'rooter' owned by 'rooter'
+<86>Nov 25 20:59:14 groupadd[110048]: group added to /etc/group: name=rooter, GID=1001
+<86>Nov 25 20:59:14 groupadd[110048]: group added to /etc/gshadow: name=rooter
+<86>Nov 25 20:59:14 groupadd[110048]: new group: name=rooter, GID=1001
+<86>Nov 25 20:59:14 useradd[110054]: new user: name=rooter, UID=1001, GID=1001, home=/root, shell=/bin/bash, from=none
+<86>Nov 25 20:59:14 userdel[110064]: delete user 'builder'
+<86>Nov 25 20:59:14 groupadd[110071]: group added to /etc/group: name=builder, GID=1002
+<86>Nov 25 20:59:14 groupadd[110071]: group added to /etc/gshadow: name=builder
+<86>Nov 25 20:59:14 groupadd[110071]: new group: name=builder, GID=1002
+<86>Nov 25 20:59:14 useradd[110077]: new user: name=builder, UID=1002, GID=1002, home=/usr/src, shell=/bin/bash, from=none
++ hsh-install flex
+txt2man
+<13>Nov 25 20:59:17 rpmi: groff-base-1.22.3-alt2 sisyphus+346264.200.2.1 1716421475 installed
+<13>Nov 25 20:59:17 rpmi: pdksh-1:5.2.14-alt5 sisyphus+343748.200.3.1 1711611906 installed
+<13>Nov 25 20:59:17 rpmi: txt2man-1.6.0-alt1 1490178724 installed
+<13>Nov 25 20:59:17 rpmi: flex-2.6.4.0.88.9801-alt2 sisyphus+346193.200.3.2 1716466857 installed
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /usr/src/in/nosrpm/art-calc-1.0-alt1.nosrc.rpm (w1.gzdio)
+Installing art-calc-1.0-alt1.src.rpm
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /usr/src/tmp/rpmb-tmp.U1tW33
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ rm -rf art-calc-1.0
++ echo 'Source #0 (art-calc-1.0.tar):'
+Source #0 (art-calc-1.0.tar):
++ /bin/tar -xf /usr/src/RPM/SOURCES/art-calc-1.0.tar
++ cd art-calc-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /usr/src/tmp/rpmb-tmp.FZBjRz
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-calc-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/usr/src/RPM/BUILD/art-calc-1.0'
+bison -d calc.y
+make: Leaving directory '/usr/src/RPM/BUILD/art-calc-1.0'
+make: Entering directory '/usr/src/RPM/BUILD/art-calc-1.0'
+bison -d calc.y
+make: Leaving directory '/usr/src/RPM/BUILD/art-calc-1.0'
+make: Entering directory '/usr/src/RPM/BUILD/art-calc-1.0'
+flex calc.l
+make: Leaving directory '/usr/src/RPM/BUILD/art-calc-1.0'
+make: Entering directory '/usr/src/RPM/BUILD/art-calc-1.0'
+txt2man -t art-calc -s 1 -v "User Commands" art-calc.txt > art-calc.1
+gawk: cmd. line:58: warning: regexp escape sequence `\o' is not a known regexp operator
+gawk: cmd. line:116: warning: regexp escape sequence `\,' is not a known regexp operator
+gawk: cmd. line:116: warning: regexp escape sequence `\;' is not a known regexp operator
+make: Leaving directory '/usr/src/RPM/BUILD/art-calc-1.0'
+make: Entering directory '/usr/src/RPM/BUILD/art-calc-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto -DYYSTYPE=long  -o art-calc calc.tab.c lex.yy.c
+make: Leaving directory '/usr/src/RPM/BUILD/art-calc-1.0'
++ exit 0
+Executing(%install): /bin/sh -e /usr/src/tmp/rpmb-tmp.ovvoXg
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ /bin/chmod -Rf u+rwX -- /usr/src/tmp/art-calc-buildroot
++ :
++ /bin/rm -rf -- /usr/src/tmp/art-calc-buildroot
++ PATH=/usr/libexec/rpm-build:/usr/src/bin:/usr/bin:/bin:/usr/local/bin:/usr/games
++ cd art-calc-1.0
++ make 'INSTALL=/usr/libexec/rpm-build/install -p' install DESTDIR=/usr/src/tmp/art-calc-buildroot PREFIX=/usr
+make: Entering directory '/usr/src/RPM/BUILD/art-calc-1.0'
+install -Dm755 art-calc /usr/src/tmp/art-calc-buildroot/usr/bin/art-calc
+install -Dm644 art-calc.1 /usr/src/tmp/art-calc-buildroot/usr/share/man/man1/art-calc.1
+make: Leaving directory '/usr/src/RPM/BUILD/art-calc-1.0'
++ /usr/lib/rpm/brp-alt
+Cleaning files in /usr/src/tmp/art-calc-buildroot (auto)
+Verifying and fixing files in /usr/src/tmp/art-calc-buildroot (binconfig,pkgconfig,libtool,desktop,gnuconfig)
+Checking contents of files in /usr/src/tmp/art-calc-buildroot/ (default)
+Compressing files in /usr/src/tmp/art-calc-buildroot (auto)
+Verifying ELF objects in /usr/src/tmp/art-calc-buildroot (arch=normal,fhs=normal,lfs=relaxed,lint=relaxed,rpath=normal,stack=normal,textrel=normal,unresolved=normal)
+Splitting links to aliased files under /{,s}bin in /usr/src/tmp/art-calc-buildroot
+Executing(%check): /bin/sh -e /usr/src/tmp/rpmb-tmp.2nq01g
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-calc-1.0
++ make check
+make: Entering directory '/usr/src/RPM/BUILD/art-calc-1.0'
+test "$(printf '2+3*4\n(7-10)*-2\n17%%5\n' | ./art-calc | paste -sd,)" = "14,6,2"
+make: Leaving directory '/usr/src/RPM/BUILD/art-calc-1.0'
++ exit 0
+Processing files: art-calc-1.0-alt1
+Finding Provides (using /usr/lib/rpm/find-provides)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.VJrS32
+find-provides: running scripts (debuginfo,lib,pam,perl,pkgconfig,python,python3,shell,sysusers)
+Finding Requires (using /usr/lib/rpm/find-requires)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.lYLo7r
+find-requires: running scripts (cpp,debuginfo,files,lib,pam,perl,pkgconfig,pkgconfiglib,python,python3,rpmlib,shebang,shell,static,symlinks,systemd-services)
+Requires: /lib64/ld-linux-x86-64.so.2, libc.so.6(GLIBC_2.14)(64bit), libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.4)(64bit), rtld(GNU_HASH)
+Finding debuginfo files (using /usr/lib/rpm/find-debuginfo-files)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.eFehZM
+Creating art-calc-debuginfo package
+Processing files: art-calc-debuginfo-1.0-alt1
+Finding Provides (using /usr/lib/rpm/find-provides)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.Fa33Yv
+find-provides: running scripts (debuginfo)
+Finding Requires (using /usr/lib/rpm/find-requires)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.HkczrF
+find-requires: running scripts (debuginfo)
+Requires: art-calc = 1.0-alt1, /usr/lib/debug/lib64/ld-linux-x86-64.so.2.debug, debug64(libc.so.6)
+Wrote: /usr/src/RPM/SRPMS/art-calc-1.0-alt1.src.rpm (w2.lzdio)
+Wrote: /usr/src/RPM/RPMS/x86_64/art-calc-1.0-alt1.x86_64.rpm (w2.lzdio)
+Wrote: /usr/src/RPM/RPMS/x86_64/art-calc-debuginfo-1.0-alt1.x86_64.rpm (w2.lzdio)
+1.55user 0.75system 0:06.37elapsed 36%CPU (0avgtext+0avgdata 31872maxresident)k
+8inputs+2368outputs (0major+165853minor)pagefaults 0swaps

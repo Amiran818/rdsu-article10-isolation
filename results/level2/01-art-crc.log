@@ -1,0 +1,108 @@
+<86>Nov 25 20:57:11 userdel[98298]: delete user 'rooter'
+<86>Nov 25 20:57:11 groupadd[98305]: group added to /etc/group: name=rooter, GID=1001
+<86>Nov 25 20:57:11 groupadd[98305]: group added to /etc/gshadow: name=rooter
+<86>Nov 25 20:57:11 groupadd[98305]: new group: name=rooter, GID=1001
+<86>Nov 25 20:57:11 useradd[98311]: new user: name=rooter, UID=1001, GID=1001, home=/root, shell=/bin/bash, from=none
+<86>Nov 25 20:57:11 userdel[98321]: delete user 'builder'
+<86>Nov 25 20:57:11 groupadd[98328]: group added to /etc/group: name=builder, GID=1002
+<86>Nov 25 20:57:11 groupadd[98328]: group added to /etc/gshadow: name=builder
+<86>Nov 25 20:57:11 groupadd[98328]: new group: name=builder, GID=1002
+<86>Nov 25 20:57:11 useradd[98334]: new user: name=builder, UID=1002, GID=1002, home=/usr/src, shell=/bin/bash, from=none
++ hsh-install zlib-devel
+help2man
+<13>Nov 25 20:57:14 rpmi: perl-Filter-1.64-alt1 sisyphus+335067.400.1.1 1700901412 installed
+<13>Nov 25 20:57:14 rpmi: perl-Encode-3.21-alt1 sisyphus+343095.100.1.1 1710875477 installed
+<13>Nov 25 20:57:14 rpmi: perl-Locale-gettext-1.07-alt1.2 sisyphus+335067.10500.2.2 1701154168 installed
+<13>Nov 25 20:57:14 rpmi: help2man-1.48.5-alt1 sisyphus+346293.200.2.1 1716441067 installed
+<13>Nov 25 20:57:14 rpmi: zlib-devel-1.3.1-alt1 sisyphus+342532.100.1.1 1710232285 installed
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+warning: user user does not exist - using root
+warning: group user does not exist - using root
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /usr/src/in/nosrpm/art-crc-1.0-alt1.nosrc.rpm (w1.gzdio)
+Installing art-crc-1.0-alt1.src.rpm
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /usr/src/tmp/rpmb-tmp.vw0MUg
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ rm -rf art-crc-1.0
++ echo 'Source #0 (art-crc-1.0.tar):'
+Source #0 (art-crc-1.0.tar):
++ /bin/tar -xf /usr/src/RPM/SOURCES/art-crc-1.0.tar
++ cd art-crc-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /usr/src/tmp/rpmb-tmp.vyAWD5
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-crc-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/usr/src/RPM/BUILD/art-crc-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto  -o art-crc crc.c -lz
+make: Leaving directory '/usr/src/RPM/BUILD/art-crc-1.0'
+make: Entering directory '/usr/src/RPM/BUILD/art-crc-1.0'
+help2man -N --name="CRC-32 and Adler-32 checksums" -o art-crc.1 ./art-crc
+make: Leaving directory '/usr/src/RPM/BUILD/art-crc-1.0'
++ exit 0
+Executing(%install): /bin/sh -e /usr/src/tmp/rpmb-tmp.0CShpU
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ /bin/chmod -Rf u+rwX -- /usr/src/tmp/art-crc-buildroot
++ :
++ /bin/rm -rf -- /usr/src/tmp/art-crc-buildroot
++ PATH=/usr/libexec/rpm-build:/usr/src/bin:/usr/bin:/bin:/usr/local/bin:/usr/games
++ cd art-crc-1.0
++ make 'INSTALL=/usr/libexec/rpm-build/install -p' install DESTDIR=/usr/src/tmp/art-crc-buildroot PREFIX=/usr
+make: Entering directory '/usr/src/RPM/BUILD/art-crc-1.0'
+install -Dm755 art-crc /usr/src/tmp/art-crc-buildroot/usr/bin/art-crc
+install -Dm644 art-crc.1 /usr/src/tmp/art-crc-buildroot/usr/share/man/man1/art-crc.1
+make: Leaving directory '/usr/src/RPM/BUILD/art-crc-1.0'
++ /usr/lib/rpm/brp-alt
+Cleaning files in /usr/src/tmp/art-crc-buildroot (auto)
+Verifying and fixing files in /usr/src/tmp/art-crc-buildroot (binconfig,pkgconfig,libtool,desktop,gnuconfig)
+Checking contents of files in /usr/src/tmp/art-crc-buildroot/ (default)
+Compressing files in /usr/src/tmp/art-crc-buildroot (auto)
+Verifying ELF objects in /usr/src/tmp/art-crc-buildroot (arch=normal,fhs=normal,lfs=relaxed,lint=relaxed,rpath=normal,stack=normal,textrel=normal,unresolved=normal)
+Splitting links to aliased files under /{,s}bin in /usr/src/tmp/art-crc-buildroot
+Executing(%check): /bin/sh -e /usr/src/tmp/rpmb-tmp.EoEmwT
++ umask 022
++ /bin/mkdir -p /usr/src/RPM/BUILD
++ cd /usr/src/RPM/BUILD
++ cd art-crc-1.0
++ make check
+make: Entering directory '/usr/src/RPM/BUILD/art-crc-1.0'
+test "$(printf abc | ./art-crc | cut -d' ' -f1-2)" = "352441c2 024d0127"
+make: Leaving directory '/usr/src/RPM/BUILD/art-crc-1.0'
++ exit 0
+Processing files: art-crc-1.0-alt1
+Finding Provides (using /usr/lib/rpm/find-provides)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.weeRmi
+find-provides: running scripts (debuginfo,lib,pam,perl,pkgconfig,python,python3,shell,sysusers)
+Finding Requires (using /usr/lib/rpm/find-requires)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.Uz8K5Q
+find-requires: running scripts (cpp,debuginfo,files,lib,pam,perl,pkgconfig,pkgconfiglib,python,python3,rpmlib,shebang,shell,static,symlinks,systemd-services)
+Requires: /lib64/ld-linux-x86-64.so.2, libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.3.4)(64bit), libc.so.6(GLIBC_2.34)(64bit), libc.so.6(GLIBC_2.4)(64bit), libz.so.1()(64bit) >= set:kiJMsFGAna, rtld(GNU_HASH)
+Requires(rpmlib): rpmlib(SetVersions)
+Finding debuginfo files (using /usr/lib/rpm/find-debuginfo-files)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.4xJuLo
+Creating art-crc-debuginfo package
+Processing files: art-crc-debuginfo-1.0-alt1
+Finding Provides (using /usr/lib/rpm/find-provides)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.D4TwuA
+find-provides: running scripts (debuginfo)
+Finding Requires (using /usr/lib/rpm/find-requires)
+Executing(+autodep): /bin/sh -e /usr/src/tmp/rpmb-autodep.FzMHOI
+find-requires: running scripts (debuginfo)
+Requires: art-crc = 1.0-alt1, /usr/lib/debug/lib64/ld-linux-x86-64.so.2.debug, debug64(libc.so.6), debug64(libz.so.1)
+Wrote: /usr/src/RPM/SRPMS/art-crc-1.0-alt1.src.rpm (w2.lzdio)
+Wrote: /usr/src/RPM/RPMS/x86_64/art-crc-1.0-alt1.x86_64.rpm (w2.lzdio)
+Wrote: /usr/src/RPM/RPMS/x86_64/art-crc-debuginfo-1.0-alt1.x86_64.rpm (w2.lzdio)
+1.29user 0.64system 0:06.03elapsed 32%CPU (0avgtext+0avgdata 25084maxresident)k
+16inputs+1144outputs (0major+165360minor)pagefaults 0swaps
