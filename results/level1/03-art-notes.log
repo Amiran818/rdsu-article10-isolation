@@ -1,0 +1,32 @@
+Installing /home/user/art10/srpm/trimmed/art-notes-1.0-alt1.src.rpm
+Executing(%prep): /bin/sh -e /tmp/.private/user/rpmb-tmp.arCH4P
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.mBgvJ6rQv5/BUILD
++ cd /tmp/.private/user/tmp.mBgvJ6rQv5/BUILD
++ cd /tmp/.private/user/tmp.mBgvJ6rQv5/BUILD
++ rm -rf art-notes-1.0
++ echo 'Source #0 (art-notes-1.0.tar):'
+Source #0 (art-notes-1.0.tar):
++ /bin/tar -xf /tmp/.private/user/tmp.mBgvJ6rQv5/SOURCES/art-notes-1.0.tar
++ cd art-notes-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /tmp/.private/user/rpmb-tmp.POy6P1
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.mBgvJ6rQv5/BUILD
++ cd /tmp/.private/user/tmp.mBgvJ6rQv5/BUILD
++ cd art-notes-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/tmp/.private/user/tmp.mBgvJ6rQv5/BUILD/art-notes-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto  -o art-notes notes.c -lsqlite3 -lreadline
+notes.c:9:10: fatal error: readline/readline.h: No such file or directory
+    9 | #include <readline/readline.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:7: art-notes] Error 1
+make: Leaving directory '/tmp/.private/user/tmp.mBgvJ6rQv5/BUILD/art-notes-1.0'
+error: Bad exit status from /tmp/.private/user/rpmb-tmp.POy6P1 (%build)
+
+
+RPM build errors:
+    Bad exit status from /tmp/.private/user/rpmb-tmp.POy6P1 (%build)

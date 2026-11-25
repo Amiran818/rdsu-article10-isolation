@@ -1,0 +1,86 @@
+Installing /home/user/art10/srpm/trimmed/art-uuid-1.0-alt1.src.rpm
+Executing(%prep): /bin/sh -e /tmp/.private/user/rpmb-tmp.r8xnRS
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.UC4PJyBrlE/BUILD
++ cd /tmp/.private/user/tmp.UC4PJyBrlE/BUILD
++ cd /tmp/.private/user/tmp.UC4PJyBrlE/BUILD
++ rm -rf art-uuid-1.0
++ echo 'Source #0 (art-uuid-1.0.tar):'
+Source #0 (art-uuid-1.0.tar):
++ /bin/tar -xf /tmp/.private/user/tmp.UC4PJyBrlE/SOURCES/art-uuid-1.0.tar
++ cd art-uuid-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /tmp/.private/user/rpmb-tmp.zyGQ7c
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.UC4PJyBrlE/BUILD
++ cd /tmp/.private/user/tmp.UC4PJyBrlE/BUILD
++ cd art-uuid-1.0
++ autoreconf -fisv
+autoreconf-default: export WARNINGS=
+autoreconf-default: Entering directory '.'
+autoreconf-default: configure.ac: not using Gettext
+autoreconf-default: running: aclocal --force 
+autoreconf-default: configure.ac: tracing
+autoreconf-default: configure.ac: not using Libtool
+autoreconf-default: configure.ac: not using Intltool
+autoreconf-default: configure.ac: not using Gtkdoc
+autoreconf-default: running: /usr/bin/autoconf-2.71 --force
+autoreconf-default: running: /usr/bin/autoheader-2.71 --force
+autoreconf-default: running: automake --add-missing --force-missing
+configure.ac:5: installing './compile'
+configure.ac:4: installing './install-sh'
+configure.ac:4: installing './missing'
+Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+autoreconf-default: Leaving directory '.'
++ CFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export CFLAGS
++ CXXFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export CXXFLAGS
++ FFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export FFLAGS
++ FCFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export FCFLAGS
++ '[' -n '' ']'
+++ printf %s '-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+++ sed -r 's/(^|[[:space:]]+)-[^m][^[:space:]]*//g'
++ ASFLAGS=
++ export ASFLAGS
++ export lt_cv_deplibs_check_method=pass_all
++ lt_cv_deplibs_check_method=pass_all
++ xargs -ri find '{}' -type f '(' -name config.sub -or -name config.guess ')' -printf '%h/\n'
++ readlink -e -- ./configure
++ sort -u
++ xargs -ri dirname -- '{}'
++ xargs -rn1 install -pm755 -- /usr/share/gnu-config/config.sub /usr/share/gnu-config/config.guess
++ configure_runstatedir_flags=
++ grep -qF runstatedir=DIR ./configure
++ configure_runstatedir_flags=--runstatedir=/var/run
++ ./configure --build=x86_64-alt-linux --host=x86_64-alt-linux --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/lib --localstatedir=/var/lib --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info --disable-dependency-tracking --disable-silent-rules --runstatedir=/var/run --without-included-gettext
+configure: WARNING: unrecognized options: --without-included-gettext
+checking for a BSD-compatible install... /usr/bin/ginstall -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for x86_64-alt-linux-gcc... x86_64-alt-linux-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-alt-linux-gcc accepts -g... yes
+checking for x86_64-alt-linux-gcc option to enable C11 features... none needed
+checking whether x86_64-alt-linux-gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-alt-linux-gcc... none
+./configure: line 4239: syntax error near unexpected token `-fstack-protector-strong,'
+./configure: line 4239: `AX_CHECK_COMPILE_FLAG(-fstack-protector-strong,'
+error: Bad exit status from /tmp/.private/user/rpmb-tmp.zyGQ7c (%build)
+
+
+RPM build errors:
+    Bad exit status from /tmp/.private/user/rpmb-tmp.zyGQ7c (%build)

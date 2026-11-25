@@ -1,0 +1,41 @@
+Installing /home/user/art10/srpm/trimmed/art-calc-1.0-alt1.src.rpm
+Executing(%prep): /bin/sh -e /tmp/.private/user/rpmb-tmp.Ynk9ba
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.n4YtykAKsP/BUILD
++ cd /tmp/.private/user/tmp.n4YtykAKsP/BUILD
++ cd /tmp/.private/user/tmp.n4YtykAKsP/BUILD
++ rm -rf art-calc-1.0
++ echo 'Source #0 (art-calc-1.0.tar):'
+Source #0 (art-calc-1.0.tar):
++ /bin/tar -xf /tmp/.private/user/tmp.n4YtykAKsP/SOURCES/art-calc-1.0.tar
++ cd art-calc-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /tmp/.private/user/rpmb-tmp.oCrQWL
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.n4YtykAKsP/BUILD
++ cd /tmp/.private/user/tmp.n4YtykAKsP/BUILD
++ cd art-calc-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/tmp/.private/user/tmp.n4YtykAKsP/BUILD/art-calc-1.0'
+bison -d calc.y
+make: Leaving directory '/tmp/.private/user/tmp.n4YtykAKsP/BUILD/art-calc-1.0'
+make: Entering directory '/tmp/.private/user/tmp.n4YtykAKsP/BUILD/art-calc-1.0'
+bison -d calc.y
+make: Leaving directory '/tmp/.private/user/tmp.n4YtykAKsP/BUILD/art-calc-1.0'
+make: Entering directory '/tmp/.private/user/tmp.n4YtykAKsP/BUILD/art-calc-1.0'
+txt2man -t art-calc -s 1 -v "User Commands" art-calc.txt > art-calc.1
+gawk: cmd. line:58: warning: regexp escape sequence `\o' is not a known regexp operator
+gawk: cmd. line:116: warning: regexp escape sequence `\,' is not a known regexp operator
+gawk: cmd. line:116: warning: regexp escape sequence `\;' is not a known regexp operator
+make: Leaving directory '/tmp/.private/user/tmp.n4YtykAKsP/BUILD/art-calc-1.0'
+make: Entering directory '/tmp/.private/user/tmp.n4YtykAKsP/BUILD/art-calc-1.0'
+flex calc.l
+make: flex: No such file or directory
+make: *** [Makefile:10: lex.yy.c] Error 127
+make: Leaving directory '/tmp/.private/user/tmp.n4YtykAKsP/BUILD/art-calc-1.0'
+error: Bad exit status from /tmp/.private/user/rpmb-tmp.oCrQWL (%build)
+
+
+RPM build errors:
+    Bad exit status from /tmp/.private/user/rpmb-tmp.oCrQWL (%build)

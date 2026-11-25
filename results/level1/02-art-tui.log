@@ -1,0 +1,33 @@
+Installing /home/user/art10/srpm/trimmed/art-tui-1.0-alt1.src.rpm
+Executing(%prep): /bin/sh -e /tmp/.private/user/rpmb-tmp.D9ONJs
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.jNKfO5IUrW/BUILD
++ cd /tmp/.private/user/tmp.jNKfO5IUrW/BUILD
++ cd /tmp/.private/user/tmp.jNKfO5IUrW/BUILD
++ rm -rf art-tui-1.0
++ echo 'Source #0 (art-tui-1.0.tar):'
+Source #0 (art-tui-1.0.tar):
++ /bin/tar -xf /tmp/.private/user/tmp.jNKfO5IUrW/SOURCES/art-tui-1.0.tar
++ cd art-tui-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /tmp/.private/user/rpmb-tmp.3ERFN6
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.jNKfO5IUrW/BUILD
++ cd /tmp/.private/user/tmp.jNKfO5IUrW/BUILD
++ cd art-tui-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/tmp/.private/user/tmp.jNKfO5IUrW/BUILD/art-tui-1.0'
+scdoc < art-tui.1.scd > art-tui.1
+/bin/sh: line 1: scdoc: command not found
+make: *** [Makefile:12: art-tui.1] Error 127
+make: Leaving directory '/tmp/.private/user/tmp.jNKfO5IUrW/BUILD/art-tui-1.0'
+make: *** Waiting for unfinished jobs....
+make: Entering directory '/tmp/.private/user/tmp.jNKfO5IUrW/BUILD/art-tui-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600  -o art-tui tui.c -lncursesw -ltinfo
+make: Leaving directory '/tmp/.private/user/tmp.jNKfO5IUrW/BUILD/art-tui-1.0'
+error: Bad exit status from /tmp/.private/user/rpmb-tmp.3ERFN6 (%build)
+
+
+RPM build errors:
+    Bad exit status from /tmp/.private/user/rpmb-tmp.3ERFN6 (%build)

@@ -1,0 +1,138 @@
+WARNING: %python3_build is deprecated and will be removed in future, please use %pyproject_build instead
+WARNING: %python3_install is deprecated and will be removed in future, please use %pyproject_install instead
+Installing /home/user/art10/srpm/trimmed/art-pyext-1.0-alt1.src.rpm
+Executing(%prep): /bin/sh -e /tmp/.private/user/rpmb-tmp.56MW84
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ cd /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ cd /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ rm -rf art-pyext-1.0
++ echo 'Source #0 (art-pyext-1.0.tar):'
+Source #0 (art-pyext-1.0.tar):
++ /bin/tar -xf /tmp/.private/user/tmp.yWxfTnTagR/SOURCES/art-pyext-1.0.tar
++ cd art-pyext-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /tmp/.private/user/rpmb-tmp.hQwwy3
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ cd /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ cd art-pyext-1.0
++ CFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export CFLAGS
++ CXXFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export CXXFLAGS
++ FFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export FFLAGS
++ /usr/bin/python3 setup.py build
+running build
+running build_ext
+building 'artfast' extension
+creating build/temp.linux-x86_64-cpython-312
+x86_64-alt-linux-gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -g -O3 -Wall -pipe -frecord-gcc-switches -Wall -g -O3 -flto=auto -ffat-lto-objects -pipe -frecord-gcc-switches -Wall -g -O3 -flto=auto -ffat-lto-objects -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto -fPIC -I/usr/include/python3.12 -c artfast.c -o build/temp.linux-x86_64-cpython-312/artfast.o
+creating build/lib.linux-x86_64-cpython-312
+x86_64-alt-linux-gcc -shared -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto build/temp.linux-x86_64-cpython-312/artfast.o -L/usr/lib64 -o build/lib.linux-x86_64-cpython-312/artfast.cpython-312.so
++ exit 0
+Executing(%install): /bin/sh -e /tmp/.private/user/rpmb-tmp.a511M1
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ cd /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ /bin/chmod -Rf u+rwX -- /tmp/.private/user/art-pyext-buildroot
++ :
++ /bin/rm -rf -- /tmp/.private/user/art-pyext-buildroot
++ PATH=/usr/libexec/rpm-build:/home/user/bin:/usr/bin:/bin:/usr/local/bin:/usr/games
++ cd art-pyext-1.0
++ CFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export CFLAGS
++ CXXFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export CXXFLAGS
++ FFLAGS='-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
++ export FFLAGS
++ /usr/bin/python3 setup.py install --skip-build --root=/tmp/.private/user/art-pyext-buildroot --force
+running install
+/usr/lib64/python3/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running install_lib
+creating /tmp/.private/user/art-pyext-buildroot/usr/lib64/python3/site-packages
+copying build/lib.linux-x86_64-cpython-312/artfast.cpython-312.so -> /tmp/.private/user/art-pyext-buildroot/usr/lib64/python3/site-packages
+warning: install_lib: byte-compiling is disabled, skipping.
+
+running install_egg_info
+running egg_info
+creating artfast.egg-info
+writing artfast.egg-info/PKG-INFO
+writing dependency_links to artfast.egg-info/dependency_links.txt
+writing top-level names to artfast.egg-info/top_level.txt
+writing manifest file 'artfast.egg-info/SOURCES.txt'
+reading manifest file 'artfast.egg-info/SOURCES.txt'
+writing manifest file 'artfast.egg-info/SOURCES.txt'
+Copying artfast.egg-info to /tmp/.private/user/art-pyext-buildroot/usr/lib64/python3/site-packages/artfast-1.0-py3.12.egg-info
+running install_scripts
++ /usr/lib/rpm/brp-alt
+Cleaning files in /tmp/.private/user/art-pyext-buildroot (auto)
+mode of './usr/lib64/python3/site-packages/artfast.cpython-312.so' changed from 0755 (rwxr-xr-x) to 0644 (rw-r--r--)
+Verifying and fixing files in /tmp/.private/user/art-pyext-buildroot (binconfig,pkgconfig,libtool,desktop,gnuconfig)
+Checking contents of files in /tmp/.private/user/art-pyext-buildroot/ (default)
+Compressing files in /tmp/.private/user/art-pyext-buildroot (auto)
+Adjusting library links in /tmp/.private/user/art-pyext-buildroot
+./usr/lib64: (from <cmdline>:0)
+Verifying ELF objects in /tmp/.private/user/art-pyext-buildroot (arch=normal,fhs=normal,lfs=relaxed,lint=relaxed,rpath=normal,stack=normal,textrel=normal,unresolved=normal)
+Splitting links to aliased files under /{,s}bin in /tmp/.private/user/art-pyext-buildroot
+Hardlinking identical .pyc and .opt-?.pyc files
+Executing(%check): /bin/sh -e /tmp/.private/user/rpmb-tmp.EeyUrg
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ cd /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ cd art-pyext-1.0
+++ echo build/lib.linux-x86_64-cpython-312
++ PYTHONPATH=build/lib.linux-x86_64-cpython-312
++ /usr/bin/python3 test_artfast.py
+artfast: ok
++ exit 0
+Processing files: art-pyext-1.0-alt1
+Finding Provides (using /usr/lib/rpm/find-provides)
+Executing(+autodep): /bin/sh -e /tmp/.private/user/rpmb-autodep.bKsL60
+find-provides: running scripts (alternatives,debuginfo,lib,pam,perl,pkgconfig,python,python3,shell,sysusers)
+Finding Requires (using /usr/lib/rpm/find-requires)
+Executing(+autodep): /bin/sh -e /tmp/.private/user/rpmb-autodep.VAIGYf
+find-requires: running scripts (cpp,debuginfo,files,lib,pam,perl,pkgconfig,pkgconfiglib,python,python3,rpmlib,shebang,shell,static,symlinks,systemd-services)
+py3prov: detected potential module:artfast.cpython-312.so
+py3prov: detected potential module:artfast.cpython-312.so
+
+Provides: python3(artfast)
+Requires: /usr/lib64/python3/site-packages, libc.so.6(GLIBC_2.2.5)(64bit), libc.so.6(GLIBC_2.4)(64bit), python3.12-ABI(64bit), rtld(GNU_HASH)
+Finding debuginfo files (using /usr/lib/rpm/find-debuginfo-files)
+Executing(+autodep): /bin/sh -e /tmp/.private/user/rpmb-autodep.As2P0H
+Creating art-pyext-debuginfo package
+Processing files: art-pyext-debuginfo-1.0-alt1
+Finding Provides (using /usr/lib/rpm/find-provides)
+Executing(+autodep): /bin/sh -e /tmp/.private/user/rpmb-autodep.ayuiFy
+find-provides: running scripts (debuginfo)
+Finding Requires (using /usr/lib/rpm/find-requires)
+Executing(+autodep): /bin/sh -e /tmp/.private/user/rpmb-autodep.H0S9lM
+find-requires: running scripts (debuginfo)
+Requires: art-pyext = 1.0-alt1, debug64(libc.so.6)
+Wrote: /tmp/.private/user/tmp.yWxfTnTagR/RPMS/x86_64/art-pyext-1.0-alt1.x86_64.rpm (w2.lzdio)
+Wrote: /tmp/.private/user/tmp.yWxfTnTagR/RPMS/x86_64/art-pyext-debuginfo-1.0-alt1.x86_64.rpm (w2.lzdio)
+Executing(--clean): /bin/sh -e /tmp/.private/user/rpmb-tmp.bp5MnN
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ cd /tmp/.private/user/tmp.yWxfTnTagR/BUILD
++ rm -rf art-pyext-1.0
++ /bin/chmod -Rf u+rwX -- /tmp/.private/user/art-pyext-buildroot
++ /bin/rm -rf -- /tmp/.private/user/art-pyext-buildroot
++ exit 0

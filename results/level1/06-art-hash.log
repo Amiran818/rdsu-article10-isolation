@@ -1,0 +1,39 @@
+Installing /home/user/art10/srpm/trimmed/art-hash-1.0-alt1.src.rpm
+Executing(%prep): /bin/sh -e /tmp/.private/user/rpmb-tmp.Iy9CLc
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.81nlA56CZW/BUILD
++ cd /tmp/.private/user/tmp.81nlA56CZW/BUILD
++ cd /tmp/.private/user/tmp.81nlA56CZW/BUILD
++ rm -rf art-hash-1.0
++ echo 'Source #0 (art-hash-1.0.tar):'
+Source #0 (art-hash-1.0.tar):
++ /bin/tar -xf /tmp/.private/user/tmp.81nlA56CZW/SOURCES/art-hash-1.0.tar
++ cd art-hash-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /tmp/.private/user/rpmb-tmp.dgk7s0
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.81nlA56CZW/BUILD
++ cd /tmp/.private/user/tmp.81nlA56CZW/BUILD
++ cd art-hash-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto' LOCALEDIR=/usr/share/locale
+make: Entering directory '/tmp/.private/user/tmp.81nlA56CZW/BUILD/art-hash-1.0'
+msgfmt --check -o po/ru.mo po/ru.po
+po/ru.po:3: warning: header field 'PO-Revision-Date' missing in header
+po/ru.po:3: warning: header field 'Last-Translator' missing in header
+po/ru.po:3: warning: header field 'Language-Team' missing in header
+make: Leaving directory '/tmp/.private/user/tmp.81nlA56CZW/BUILD/art-hash-1.0'
+make: Entering directory '/tmp/.private/user/tmp.81nlA56CZW/BUILD/art-hash-1.0'
+markdown -o README.html README.md
+make: markdown: No such file or directory
+make: *** [Makefile:14: README.html] Error 127
+make: Leaving directory '/tmp/.private/user/tmp.81nlA56CZW/BUILD/art-hash-1.0'
+make: *** Waiting for unfinished jobs....
+make: Entering directory '/tmp/.private/user/tmp.81nlA56CZW/BUILD/art-hash-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto -DLOCALEDIR='"/usr/share/locale"'  -o art-hash hash.c -lcrypto
+make: Leaving directory '/tmp/.private/user/tmp.81nlA56CZW/BUILD/art-hash-1.0'
+error: Bad exit status from /tmp/.private/user/rpmb-tmp.dgk7s0 (%build)
+
+
+RPM build errors:
+    Bad exit status from /tmp/.private/user/rpmb-tmp.dgk7s0 (%build)

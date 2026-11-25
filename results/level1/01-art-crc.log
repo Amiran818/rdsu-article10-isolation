@@ -1,0 +1,32 @@
+Installing /home/user/art10/srpm/trimmed/art-crc-1.0-alt1.src.rpm
+Executing(%prep): /bin/sh -e /tmp/.private/user/rpmb-tmp.1xogDx
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.UPxSWsRk6Q/BUILD
++ cd /tmp/.private/user/tmp.UPxSWsRk6Q/BUILD
++ cd /tmp/.private/user/tmp.UPxSWsRk6Q/BUILD
++ rm -rf art-crc-1.0
++ echo 'Source #0 (art-crc-1.0.tar):'
+Source #0 (art-crc-1.0.tar):
++ /bin/tar -xf /tmp/.private/user/tmp.UPxSWsRk6Q/SOURCES/art-crc-1.0.tar
++ cd art-crc-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /tmp/.private/user/rpmb-tmp.fMflBf
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.UPxSWsRk6Q/BUILD
++ cd /tmp/.private/user/tmp.UPxSWsRk6Q/BUILD
++ cd art-crc-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/tmp/.private/user/tmp.UPxSWsRk6Q/BUILD/art-crc-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto  -o art-crc crc.c -lz
+crc.c:4:10: fatal error: zlib.h: No such file or directory
+    4 | #include <zlib.h>
+      |          ^~~~~~~~
+compilation terminated.
+make: *** [Makefile:7: art-crc] Error 1
+make: Leaving directory '/tmp/.private/user/tmp.UPxSWsRk6Q/BUILD/art-crc-1.0'
+error: Bad exit status from /tmp/.private/user/rpmb-tmp.fMflBf (%build)
+
+
+RPM build errors:
+    Bad exit status from /tmp/.private/user/rpmb-tmp.fMflBf (%build)

@@ -1,0 +1,35 @@
+Installing /home/user/art10/srpm/trimmed/art-xq-1.0-alt1.src.rpm
+Executing(%prep): /bin/sh -e /tmp/.private/user/rpmb-tmp.dRUsxt
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.DczPieosGg/BUILD
++ cd /tmp/.private/user/tmp.DczPieosGg/BUILD
++ cd /tmp/.private/user/tmp.DczPieosGg/BUILD
++ rm -rf art-xq-1.0
++ echo 'Source #0 (art-xq-1.0.tar):'
+Source #0 (art-xq-1.0.tar):
++ /bin/tar -xf /tmp/.private/user/tmp.DczPieosGg/SOURCES/art-xq-1.0.tar
++ cd art-xq-1.0
++ /bin/chmod -c -Rf u+rwX,go-w .
++ exit 0
+Executing(%build): /bin/sh -e /tmp/.private/user/rpmb-tmp.nNyWc6
++ umask 022
++ /bin/mkdir -p /tmp/.private/user/tmp.DczPieosGg/BUILD
++ cd /tmp/.private/user/tmp.DczPieosGg/BUILD
++ cd art-xq-1.0
++ make -j2 'CFLAGS=-pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto'
+make: Entering directory '/tmp/.private/user/tmp.DczPieosGg/BUILD/art-xq-1.0'
+xsltproc --nonet -o art-xq.1 man.xsl art-xq.xml
+make: Leaving directory '/tmp/.private/user/tmp.DczPieosGg/BUILD/art-xq-1.0'
+make: Entering directory '/tmp/.private/user/tmp.DczPieosGg/BUILD/art-xq-1.0'
+cc -pipe -frecord-gcc-switches -Wall -g -O2 -flto=auto -I/usr/include/libxml2  -o art-xq xq.c -lxml2
+xq.c:4:10: fatal error: libxml/parser.h: No such file or directory
+    4 | #include <libxml/parser.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:7: art-xq] Error 1
+make: Leaving directory '/tmp/.private/user/tmp.DczPieosGg/BUILD/art-xq-1.0'
+error: Bad exit status from /tmp/.private/user/rpmb-tmp.nNyWc6 (%build)
+
+
+RPM build errors:
+    Bad exit status from /tmp/.private/user/rpmb-tmp.nNyWc6 (%build)
