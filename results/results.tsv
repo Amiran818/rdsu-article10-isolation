@@ -1,0 +1,31 @@
+package	level	removed	rc	outcome	env_packages	diagnostic
+01-art-crc	level1	zlib-devel	1	обнаружена	2316	crc.c:4:10: fatal error: zlib.h: No such file or directory
+02-art-tui	level1	scdoc	1	обнаружена	2316	/bin/sh: line 1: scdoc: command not found
+03-art-notes	level1	libreadline-devel	1	обнаружена	2316	notes.c:9:10: fatal error: readline/readline.h: No such file or directory
+04-art-calc	level1	flex	1	обнаружена	2316	make: flex: No such file or directory
+05-art-xq	level1	libxml2-devel	1	обнаружена	2316	xq.c:4:10: fatal error: libxml/parser.h: No such file or directory
+06-art-hash	level1	discount	1	обнаружена	2316	make: markdown: No such file or directory
+07-art-geo	level1	cmake	0	случайный успех	2316	
+08-art-ini	level1	glib2-devel	1	обнаружена	2316	meson.build:3:7: ERROR: Dependency "glib-2.0" not found, tried pkgconfig and cmake
+09-art-pyext	level1	python3-dev	0	случайный успех	2316	
+10-art-uuid	level1	autoconf-archive	1	обнаружена	2316	./configure: line 4239: `AX_CHECK_COMPILE_FLAG(-fstack-protector-strong,'
+01-art-crc	level2	zlib-devel	0	случайный успех	185	
+02-art-tui	level2	scdoc	0	случайный успех	185	
+03-art-notes	level2	libreadline-devel	0	случайный успех	183	
+04-art-calc	level2	flex	0	случайный успех	183	
+05-art-xq	level2	libxml2-devel	0	случайный успех	183	
+06-art-hash	level2	discount	0	случайный успех	193	
+07-art-geo	level2	cmake	0	случайный успех	225	
+08-art-ini	level2	glib2-devel	0	случайный успех	208	
+09-art-pyext	level2	python3-dev	0	случайный успех	214	
+10-art-uuid	level2	autoconf-archive	0	случайный успех	182	
+01-art-crc	level3	zlib-devel	1	обнаружена	184	crc.c:4:10: fatal error: zlib.h: No such file or directory
+02-art-tui	level3	scdoc	1	обнаружена	184	/bin/sh: line 1: scdoc: command not found
+03-art-notes	level3	libreadline-devel	1	обнаружена	182	notes.c:9:10: fatal error: readline/readline.h: No such file or directory
+04-art-calc	level3	flex	1	обнаружена	182	make: flex: No such file or directory
+05-art-xq	level3	libxml2-devel	1	обнаружена	182	xq.c:4:10: fatal error: libxml/parser.h: No such file or directory
+06-art-hash	level3	discount	1	обнаружена	191	make: markdown: No such file or directory
+07-art-geo	level3	cmake	0	случайный успех	225	
+08-art-ini	level3	glib2-devel	1	обнаружена	200	meson.build:3:7: ERROR: Dependency "glib-2.0" not found, tried pkgconfig
+09-art-pyext	level3	python3-dev	0	случайный успех	214	
+10-art-uuid	level3	autoconf-archive	1	обнаружена	181	./configure: line 4239: `AX_CHECK_COMPILE_FLAG(-fstack-protector-strong,'
